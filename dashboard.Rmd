@@ -1,0 +1,88 @@
+---
+title: "dashboard"
+output:
+   flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    social: menu
+    source: embed
+    theme: simplex
+---
+
+```{r}
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+```
+
+
+```{r}
+data("rest_inspec") 
+inspec = rest_inspec %>% select(boro, grade, dba, score)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Inspection Grade Count by Borough
+
+```{r}
+inspec %>% 
+ count(boro, grade) %>% 
+  filter(grade != "Not Yet Graded" & grade !="P" & grade !="Z" & boro != "Missing") %>% 
+  plot_ly(x = ~boro, y = ~n, color = ~grade, text = ~boro,alpha = 2,
+          colors = "viridis", type = "bar", mode = "markers") %>% 
+         layout(
+         title = "Inspection Grade Count, by Borough", 
+         xaxis = list(title="NYC Boroughs"),
+         yaxis = list(title="Number of Restaurants")
+         )
+
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Inspection Score Distribution by Borough
+
+```{r}
+inspec %>% 
+  drop_na(score) %>% 
+  select(score, boro, dba) %>% 
+  filter(boro != "Missing") %>% 
+  plot_ly(
+    x = ~boro, y  = ~score, color = ~boro, text = ~dba, type = "box", mode = "markers", alpha = .2, colors = "viridis", size = 0.5) %>% 
+    layout(
+         title = "Inspection Score Distribution, by Borough", 
+         xaxis = list(title="NYC Boroughs"),
+         yaxis = list(title="Inspectio Scores")
+         )
+```
+
+
+### "Best" Pizza in NYC: By Mean Inspection Score & Number of Inspections 
+
+```{r}
+rest_inspec %>% 
+  drop_na(score) %>% drop_na(grade) %>% 
+  select(score, boro, grade, dba, street, cuisine_description, inspection_date) %>% 
+  filter(boro != "Missing", grade != "Not Yet Graded" & grade !="P" & grade !="Z", inspection_date >= "2016-01-01 UTC", str_detect(dba, "PIZZ")) %>% 
+  mutate(text_label = str_c("Name: ", dba, "\nCuisine: ", cuisine_description, "\nStreet: ", street, "\nGrade: ", grade)) %>% 
+  group_by(dba) %>% 
+  summarize(
+    n_obs = n(),
+    mean_score = mean(score) %>% round(2), 
+    text_label,
+    grade,
+    boro
+  ) %>%
+  plot_ly(
+    x = ~n_obs, y = ~mean_score, type = "scatter", mode = "markers", color =~boro, text = ~text_label, alpha = .5, mode = "markers",
+  colors = "viridis") %>% 
+  layout(
+         title = "NYC: Pizzas & Number of Inspections, by Average Inspection Scores", 
+         xaxis = list(title="Number of Inspections"),
+         yaxis = list(title="Average Inspection Scores")
+         )
+```
