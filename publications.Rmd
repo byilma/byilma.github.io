@@ -1,0 +1,17 @@
+---
+output: 
+    toc: true
+    toc_float: true
+---
+
+## 2020
+
+Bhatt, S., Pioso, M. S., Olesinski, E. A., **Yilma, B**., Ryan, J. A., Mashaka, T., ... & Letai, A. (2020). Reduced mitochondrial apoptotic priming drives resistance to BH3 mimetics in acute myeloid leukemia. Cancer Cell, 38(6), 872-890. [[Link](https://pubmed.ncbi.nlm.nih.gov/33217342/)
+
+Garcia, J. S., Bhatt, S., Fell, G., Sperling, A. S., Burgess, M., Keshishian, H., **Yilma, B**., ... & Letai, A. (2020). Increased mitochondrial apoptotic priming with targeted therapy predicts clinical response to re‐induction chemotherapy. American journal of hematology, 95(3), 245-250. [[Link](https://pubmed.ncbi.nlm.nih.gov/31804723/)
+
+## 2018	
+
+Duwadi, D., Shrestha, A., **Yilma, B**., Kozlovski, I., Sa-Eed, M., Dahal, N., & Jukosky, J. (2018). Identification and screening of potent antimicrobial peptides in arthropod genomes. Peptides, 103, 26-30.[[Link](https://pubmed.ncbi.nlm.nih.gov/29501691/)
+	
+	

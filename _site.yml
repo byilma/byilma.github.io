@@ -5,12 +5,14 @@ navbar:
   right:
     - text: "About"
       href: about.html
-    - text: "Dashboard"
-      href: dashboard.html
+    - text: "Publications"
+      href: publications.html
+    - text: "Resume"
+      href: resume.html
     - icon: fa-envelope fa-lg
       href: mailto:<binyyil@gmail.com>
     - icon: fa-github fa-lg
       href: https://github.com/byilma
 output:
   html_document:
-    theme: united
+    theme: readable

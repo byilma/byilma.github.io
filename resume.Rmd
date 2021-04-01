@@ -1,0 +1,18 @@
+---
+output: html_document
+    toc: true
+    toc_float: true
+---
+
+
+
+
+Please email me for my most updated CV.
+
+
+
+## Github & LinkedIn
+* [Github](https://github.com/byilma)
+* [Linkedin](https://www.linkedin.com/in/binyamyilma)
+
+
