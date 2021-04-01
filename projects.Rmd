@@ -1,0 +1,10 @@
+---
+output: 
+    toc: true
+    toc_float: true
+---
+
+
+I'm working on updating my website with some of the more exciting projects I've worked on. In the meantime, please feel free to checkout of my github. 
+
+* [Github](https://github.com/byilma)

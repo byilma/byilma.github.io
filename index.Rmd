@@ -7,9 +7,9 @@ output:
 ---
 
 
-## Introduction
+Welcome friends!\
 
-Welcome to my website! My name is Binyam Yilma, and I'm currently a 2nd year student at Columbia University's Mailman School of Public Health. My study focus is on Biostatistics within Public Health, and Comparative Effectiveness and Outcomes Research.
+My name is Binyam Yilma, and I am currently a 2nd year student at Columbia University's Mailman School of Public Health. My study focus is on **Biostatistics** within Public Health, and **Comparative Effectiveness and Outcomes Research**.
 
 
 I love running, cooking, watching good films, chocolate, jazz and **Data Science**! 
