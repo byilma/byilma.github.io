@@ -3,7 +3,11 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "Projects"
+    - text: Projects
+      menu:
+    - text: "Bikes & Microvehicles in New York City"
+      href: https://byilma.github.io/nyc_microvehicle_injuries/
+    - text: "Updates"
       href: projects.html
     - text: "Publications"
       href: publications.html
